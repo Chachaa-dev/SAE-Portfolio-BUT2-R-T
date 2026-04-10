@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Chaïma | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="noise"></div>
+<div class="grid-bg"></div>
+<div class="scanline"></div>
+
+<div class="container">
+
+<header>
+    <div class="logo-wrap">
+        <span class="logo-bracket">[</span>
+        <h1 class="logo">El Aïchaoui Chaïma</h1>
+        <span class="logo-bracket">]</span>
+    </div>
+    <nav>
+        <a href="#about"><span class="nav-num">01.</span>À propos</a>
+        <a href="#skills"><span class="nav-num">02.</span>Compétences</a>
+        <a href="#experience"><span class="nav-num">03.</span>Expériences</a>
+        <a href="#projects"><span class="nav-num">04.</span>Projets</a>
+        <a href="#contact"><span class="nav-num">05.</span>Contact</a>
+    </nav>
+    <div class="status-dot"><span></span>Disponible</div>
+</header>
+
+<section class="hero">
+    <div class="hero-tag">// portfolio.v2026</div>
+    <h2 class="title">Cybersecurity<br><em>Student</em></h2>
+    <div class="hero-line"></div>
+    <p class="subtitle">Future RSSI &nbsp;·&nbsp; Réseaux &nbsp;·&nbsp; Pentesting</p>
+    <div class="hero-scroll">scroll<span class="scroll-arrow">↓</span></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section fade">
+    <div class="section-label">// 01. à propos</div>
+    <div class="about-container">
+        <div class="about-text">
+            <h2>Qui<br>suis-je ?</h2>
+            <p>
+                Étudiante en BUT Réseaux & Télécommunications spécialisée en cybersécurité,
+                je développe des compétences en administration systèmes et réseaux, en sécurité informatique ainsi qu'en configuration d'infrastructures.
+            </p>
+            <p>
+                Mon objectif à long terme est d'évoluer vers un poste de Responsable de la Sécurité des Systèmes d'Information (RSSI),
+                en contribuant à la sécurisation des infrastructures et à la gestion des risques.
+            </p>
+            <div class="cv-section">
+                <h3>Mon CV</h3>
+                <p>Vous pouvez consulter et télécharger mon CV pour en savoir plus sur mon parcours académique et professionnel.</p>
+                <a href="cv.pdf" download class="btn cv-btn">
+                    <span class="btn-icon">↓</span> Télécharger mon CV
+                </a>
+            </div>
+        </div>
+        <div class="about-img">
+            <div class="img-frame">
+                <img src="images/moi.jpg" alt="Photo de Chaïma">
+                <div class="img-corner tl"></div>
+                <div class="img-corner tr"></div>
+                <div class="img-corner bl"></div>
+                <div class="img-corner br"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INTERESTS -->
+<section id="interests" class="fade">
+    <div class="section-label">// centres d'intérêt</div>
+    <h2>Intérêts</h2>
+    <p class="section-sub">Quels sont mes intérêts ?</p>
+    <div class="interests-container">
+        <div class="pie-wrap">
+            <div class="pie"></div>
+            <div class="pie-legend">
+                <div class="pie-item" data-color="c1"><span></span>Cybersécurité</div>
+                <div class="pie-item" data-color="c2"><span></span>Réseaux</div>
+                <div class="pie-item" data-color="c3"><span></span>Basketball</div>
+                <div class="pie-item" data-color="c4"><span></span>Voyage</div>
+            </div>
+        </div>
+        <div class="preview">
+            <div class="preview-frame">
+                <img id="preview-img" src="images/default.jpg" alt="">
+                <div class="preview-overlay">
+                    <p id="preview-text">Survole une partie</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="fade">
+    <div class="section-label">// 02. compétences</div>
+    <h2>Compétences</h2>
+    <div class="skills-grid">
+        <div class="skill-card" onclick="showSkill('admin')">
+            <span class="skill-num">01</span>
+            <span class="skill-name">Administrer</span>
+            <span class="skill-arrow">→</span>
+        </div>
+        <div class="skill-card" onclick="showSkill('connect')">
+            <span class="skill-num">02</span>
+            <span class="skill-name">Connecter</span>
+            <span class="skill-arrow">→</span>
+        </div>
+        <div class="skill-card" onclick="showSkill('prog')">
+            <span class="skill-num">03</span>
+            <span class="skill-name">Programmer</span>
+            <span class="skill-arrow">→</span>
+        </div>
+        <div class="skill-card" onclick="showSkill('dev')">
+            <span class="skill-num">04</span>
+            <span class="skill-name">Développer</span>
+            <span class="skill-arrow">→</span>
+        </div>
+        <div class="skill-card" onclick="showSkill('secu')">
+            <span class="skill-num">05</span>
+            <span class="skill-name">Sécuriser</span>
+            <span class="skill-arrow">→</span>
+        </div>
+    </div>
+
+    <div id="skill-detail" class="skill-detail">
+        <p class="placeholder">_  Clique sur une compétence pour afficher les détails.</p>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="fade">
+    <div class="section-label">// 03. expériences</div>
+    <h2>Expériences</h2>
+
+    <div class="exp-grid">
+        <div class="exp-card" onclick="toggleExperience(this, 'poste')">
+            <div class="exp-header">
+                <div>
+                    <h3>Employée commerciale</h3>
+                    <span class="exp-sub">Souk Dubai · 2024</span>
+                </div>
+                <span class="exp-toggle">+</span>
+            </div>
+            <div class="exp-detail hidden"></div>
+        </div>
+
+        <div class="exp-card" onclick="toggleExperience(this, 'poste2')">
+            <div class="exp-header">
+                <div>
+                    <h3>Stage Assistante RH</h3>
+                    <span class="exp-sub">La Poste · 2020</span>
+                </div>
+                <span class="exp-toggle">+</span>
+            </div>
+            <div class="exp-detail hidden"></div>
+        </div>
+
+        <div class="exp-card" onclick="toggleExperience(this, 'stage')">
+            <div class="exp-header">
+                <div>
+                    <h3>Stage à venir</h3>
+                    <span class="exp-sub">À remplir</span>
+                </div>
+                <span class="exp-toggle">+</span>
+            </div>
+            <div class="exp-detail hidden"></div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="fade">
+    <div class="section-label">// 04. SAE & projets personnels</div>
+    <h2>SAE &<br>Projets personnels</h2>
+
+    <div class="proj-grid">
+        <div class="proj-card" onclick="toggleProject(this, 'hygiene')">
+            <div class="proj-num">01</div>
+            <div class="proj-info">
+                <h3>Hygiène informatique</h3>
+                <span>Vidéo de prévention</span>
+            </div>
+            <span class="proj-toggle">↓</span>
+            <div class="proj-detail hidden"></div>
+        </div>
+        <div class="proj-card" onclick="toggleProject(this, 'web')">
+            <div class="proj-num">02</div>
+            <div class="proj-info">
+                <h3>Se présenter sur internet</h3>
+                <span>HTML / CSS</span>
+            </div>
+            <span class="proj-toggle">↓</span>
+            <div class="proj-detail hidden"></div>
+        </div>
+        <div class="proj-card" onclick="toggleProject(this, 'integratif')">
+            <div class="proj-num">03</div>
+            <div class="proj-info">
+                <h3>Projet intégratif</h3>
+                <span>Infrastructure & sécurité</span>
+            </div>
+            <span class="proj-toggle">↓</span>
+            <div class="proj-detail hidden"></div>
+        </div>
+        <div class="proj-card" onclick="toggleProject(this, 'reseau')">
+            <div class="proj-num">04</div>
+            <div class="proj-info">
+                <h3>Réseau multisites</h3>
+                <span>Architecture réseau</span>
+            </div>
+            <span class="proj-toggle">↓</span>
+            <div class="proj-detail hidden"></div>
+        </div>
+        <div class="proj-card" onclick="toggleProject(this, 'comm')">
+            <div class="proj-num">05</div>
+            <div class="proj-info">
+                <h3>Applications communicantes</h3>
+                <span>Client/serveur</span>
+            </div>
+            <span class="proj-toggle">↓</span>
+            <div class="proj-detail hidden"></div>
+        </div>
+        <div class="proj-card" onclick="toggleProject(this, 'pentest')">
+            <div class="proj-num">06</div>
+            <div class="proj-info">
+                <h3>Pentest</h3>
+                <span>Audit de sécurité</span>
+            </div>
+            <span class="proj-toggle">↓</span>
+            <div class="proj-detail hidden"></div>
+        </div>
+        <div class="proj-card" onclick="toggleProject(this, 'portfolio')">
+            <div class="proj-num">07</div>
+            <div class="proj-info">
+                <h3>Portfolio</h3>
+                <span>Site personnel</span>
+            </div>
+            <span class="proj-toggle">↓</span>
+            <div class="proj-detail hidden"></div>
+        </div>
+        <div class="proj-card perso" onclick="toggleProject(this, 'morpion')">
+            <div class="proj-num">P1</div>
+            <div class="proj-info">
+                <h3>Morpion Python</h3>
+                <span>Jeu interactif en Python</span>
+            </div>
+            <span class="proj-toggle">↓</span>
+            <div class="proj-detail hidden"></div>
+        </div>
+        <div class="proj-card perso" onclick="toggleProject(this, 'snake')">
+            <div class="proj-num">P2</div>
+            <div class="proj-info">
+                <h3>Snake Python</h3>
+                <span>Jeu Snake avec clavier</span>
+            </div>
+            <span class="proj-toggle">↓</span>
+            <div class="proj-detail hidden"></div>
+        </div>
+        <div class="proj-card perso" onclick="toggleProject(this, 'wifi')">
+            <div class="proj-num">P3</div>
+            <div class="proj-info">
+                <h3>Attaque WiFi (lab)</h3>
+                <span>Tests en environnement contrôlé</span>
+            </div>
+            <span class="proj-toggle">↓</span>
+            <div class="proj-detail hidden"></div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="fade contact">
+    <div class="section-label">// 05. contact</div>
+    <h2>Prenons<br>contact.</h2>
+    <p class="contact-email">
+        <span class="at">@</span>
+        <a href="mailto:chaimaelaichaoui.pro@outlook.com">chaimaelaichaoui.pro@outlook.com</a>
+    </p>
+    <div class="contact-links">
+        <a href="https://github.com/Chachaa-dev" target="_blank" class="contact-link">
+            <span class="link-label">GitHub</span>
+            <span class="link-arrow">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/-chaïmaea-" target="_blank" class="contact-link">
+            <span class="link-label">LinkedIn</span>
+            <span class="link-arrow">↗</span>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <span class="footer-text">© 2026 Chaïma El Aïchaoui</span>
+    <span class="footer-tag">// built with intention</span>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
